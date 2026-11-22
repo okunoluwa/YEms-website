@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Treatment Initiative | YEMs Gallery</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Y</span>
+            YOUNG EXECUTIVE <strong>MINDS</strong>
+        </a>
+
+        <button class="menu-toggle" id="menuBtn"
+                aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="impact.html">Our Impact</a>
+            <a href="team.html">Our Team</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html" class="nav-contact">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero album-hero">
+        <div class="container">
+
+            <a href="gallery.html" class="album-back-link">
+                ← Back to Gallery
+            </a>
+
+            <span class="eyebrow">YEMS PHOTO COLLECTION</span>
+
+            <h1>Water Treatment Initiative</h1>
+
+            <p>Pictures from water treatment and clean water initiatives.</p>
+
+        </div>
+    </section>
+
+
+    <section class="section album-section">
+        <div class="container">
+
+            <div class="album-heading">
+                <div>
+                    <span class="eyebrow">PHOTO COLLECTION</span>
+                    <h2>Programme Pictures</h2>
+                    <p id="photoCount"></p>
+                </div>
+            </div>
+
+            <!-- ==========================================================
+                 HOW TO ADD A PICTURE TO THIS ALBUM
+                 1. Copy the image file into:  images/gallery/water/
+                 2. Copy ONE whole <figure> block below (from <figure to </figure>)
+                    and paste it at the END of the list, just before the closing
+                    </div> of "album-photo-grid".
+                 3. In the pasted block change the file name in href and src,
+                    and the text in data-caption, alt and figcaption.
+                 That is all. The picture count updates by itself.
+                 ========================================================== -->
+            <div class="album-photo-grid">
+
+            <figure class="album-photo-card">
+                <a class="zoom" href="images/gallery/water/01.jpg" data-caption="Water plant powered by alternative energy">
+                    <img src="images/gallery/water/01.jpg" alt="Water plant powered by alternative energy" loading="lazy">
+                </a>
+                <figcaption class="album-photo-caption">Water plant powered by alternative energy</figcaption>
+            </figure>
+
+            <figure class="album-photo-card">
+                <a class="zoom" href="images/gallery/water/02.jpg" data-caption="Power plant installed in Philippi, Cape Town">
+                    <img src="images/gallery/water/02.jpg" alt="Power plant installed in Philippi, Cape Town" loading="lazy">
+                </a>
+                <figcaption class="album-photo-caption">Power plant installed in Philippi, Cape Town</figcaption>
+            </figure>
+
+            <figure class="album-photo-card">
+                <a class="zoom" href="images/gallery/water/03.jpg" data-caption="Mini water purification and testing lab">
+                    <img src="images/gallery/water/03.jpg" alt="Mini water purification and testing lab" loading="lazy">
+                </a>
+                <figcaption class="album-photo-caption">Mini water purification and testing lab</figcaption>
+            </figure>
+
+            <figure class="album-photo-card">
+                <a class="zoom" href="images/gallery/water/04.jpg" data-caption="Bottled water from the Philippi plant, September 2023">
+                    <img src="images/gallery/water/04.jpg" alt="Bottled water from the Philippi plant, September 2023" loading="lazy">
+                </a>
+                <figcaption class="album-photo-caption">Bottled water from the Philippi plant, September 2023</figcaption>
+            </figure>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <a href="index.html" class="logo footer-logo">
+                <span class="logo-mark">
+                    <img src="image/WhatsApp Image 2026-11-19 at 11.39.47.jpeg"
+                         alt="Young Executive Minds Logo">
+                </span>
+                <span>YOUNG EXECUTIVE <strong>MINDS</strong></span>
+            </a>
+            <p>Reforming, Transforming and Rebranding.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="impact.html">Our Impact</a>
+            <a href="team.html">Our Team</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>272 Oak Ave, Ferndale, Randburg, 2196, Johannesburg, South Africa</p>
+            <a href="https://www.yems1.org" target="_blank" rel="noopener">
+                www.yems1.org
+            </a>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© <span id="year"></span> Young Executive Minds.</p>
+        <p>Website developed by <strong>E-TECH</strong></p>
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/photo-viewer.js"></script>
+
+</body>
+</html>

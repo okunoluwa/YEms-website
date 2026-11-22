@@ -1218,3 +1218,253 @@ img {
     }
 
 }
+
+
+/* =========================================
+   YEMS GALLERY ALBUM CATEGORIES
+========================================= */
+
+.gallery-intro {
+    margin-bottom: 35px;
+}
+
+.gallery-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gallery-intro p {
+    color: var(--muted);
+}
+
+.gallery-album-card {
+    background: var(--light);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: 0.3s ease;
+}
+
+.gallery-album-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: var(--orange);
+}
+
+.gallery-album-card a {
+    display: block;
+}
+
+.gallery-album-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.gallery-album-card:hover img {
+    transform: scale(1.03);
+}
+
+.gallery-album-card figcaption {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gallery-album-card figcaption strong {
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+.gallery-album-card figcaption span {
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   INDIVIDUAL ALBUM PAGE
+========================================= */
+
+.album-hero {
+    padding-top: 65px;
+    padding-bottom: 75px;
+}
+
+.album-back-link {
+    display: inline-block;
+    color: var(--white);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.album-back-link:hover {
+    color: var(--orange);
+}
+
+.album-section {
+    background: var(--light);
+}
+
+.album-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.album-heading h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.album-heading p {
+    color: var(--muted);
+}
+
+.album-upload {
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.album-message {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.album-message:empty {
+    display: none;
+}
+
+.album-message.success {
+    color: #15803d;
+}
+
+.album-message.error {
+    color: #dc2626;
+}
+
+
+/* PHOTO GRID */
+
+.album-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.album-photo-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(13, 31, 57, 0.05);
+}
+
+.album-photo-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.album-photo-details {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.album-photo-details p {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+.album-delete {
+    border: 0;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 9px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.album-delete:hover {
+    background: #fecaca;
+}
+
+
+/* EMPTY ALBUM */
+
+.album-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 65px 20px;
+    background: var(--white);
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+}
+
+.album-empty-icon {
+    font-size: 3rem;
+    color: var(--orange);
+    margin-bottom: 15px;
+}
+
+.album-empty h3 {
+    margin-bottom: 10px;
+}
+
+.album-empty p {
+    color: var(--muted);
+}
+
+
+/* STORAGE NOTICE */
+
+.album-notice {
+    margin-top: 35px;
+    padding: 18px;
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    border-radius: 7px;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+
+/* ALBUM RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+    .album-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .album-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .album-upload {
+        width: 100%;
+    }
+
+    .album-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-album-card img {
+        height: 230px;
+    }
+
+    .album-photo-card img {
+        height: 240px;
+    }
+}
