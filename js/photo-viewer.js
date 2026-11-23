@@ -7,6 +7,24 @@
     if (counter) counter.textContent = links.length + (links.length === 1 ? " picture" : " pictures");
     if (!links.length) return;
 
+    /* Viewer styles live here so the viewer works even if css/style.css is replaced */
+    var style = document.createElement("style");
+    style.textContent = 
+        ".album-photo-card a.zoom{display:block;cursor:zoom-in}\n" +
+        ".album-photo-card a.zoom:focus-visible{outline:3px solid #4f8fd0;outline-offset:-3px}\n" +
+        ".album-photo-caption{display:block;padding:12px 14px;font-size:.9rem;line-height:1.4;color:#444}\n" +
+        ".pv{position:fixed;top:0;right:0;bottom:0;left:0;z-index:99999;display:none;flex-direction:column;background:#050814;color:#fff;touch-action:none}\n" +
+        ".pv.open{display:flex}\n" +
+        ".pv-bar{display:flex;flex-wrap:wrap;gap:8px;padding:10px 12px;background:#0b1020}\n" +
+        ".pv-bar button{font:inherit;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:8px 14px;cursor:pointer}\n" +
+        ".pv-bar button:hover{background:rgba(255,255,255,.26)}\n" +
+        ".pv-bar .pv-close{margin-left:auto;background:#d8171f;border-color:#d8171f}\n" +
+        ".pv-stage{flex:1;overflow:hidden;display:flex;align-items:center;justify-content:center;cursor:grab;min-height:0}\n" +
+        ".pv-stage.drag{cursor:grabbing}\n" +
+        ".pv-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transform-origin:center;user-select:none;-webkit-user-drag:none;will-change:transform}\n" +
+        ".pv-cap{margin:0;padding:10px 16px 14px;text-align:center;font-size:.95rem;background:#0b1020}\n";
+    document.head.appendChild(style);
+
     var v = document.createElement("div");
     v.className = "pv";
     v.setAttribute("role", "dialog");
