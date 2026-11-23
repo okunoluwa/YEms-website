@@ -1,6 +1,3 @@
-/* YEMs photo viewer: click a picture to open it full screen, then zoom and pan.
-   Zoom: + / - buttons, mouse wheel, double-click/double-tap, or pinch on a phone.
-   Pan: drag when zoomed. Browse: Previous / Next buttons or the arrow keys. Close: Esc. */
 (function () {
     var links = [].slice.call(document.querySelectorAll("a.zoom"));
     var counter = document.getElementById("photoCount");
